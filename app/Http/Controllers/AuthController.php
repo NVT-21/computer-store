@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Services\AuthService;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
+use App\Mail\VerifyEmail;
 use Session;
 
 class AuthController extends Controller
@@ -17,8 +20,14 @@ class AuthController extends Controller
     }
     function register(UserRequest $request){
         $data =  $request->validated();
-        $this->userService->register($data);
+       $user= $this->userService->register($data);
+        // Mail::to($user->email)->send(new EmailVerification($user));
         return back()->with('success', "Register successfully");
+    }
+    function sendEmail()
+    {
+          Mail::to('phuhao@gmail.com')->send(new VerifyEmail());
+          return "send Email";
     }
     
     function login(Request $request)
@@ -41,22 +50,41 @@ class AuthController extends Controller
         
         // Kiểm tra nếu user là admin
         if (isAdmin($idRoles)) {
-            return redirect()->route('admin.home')->with('success', 'login success');
+            return redirect()->route('admin.home')->with('success', 'Login successful');
         } else {
-            return redirect()->route('home')->with('success', 'login success');
+            return redirect()->route('home')->with('success', 'Login successful');
         }
+    }
+    function logOut(){
+        Auth::logout();
+        return redirect()->route('login');
     }
     
 
     function showRegister(){
-        return view('User.Auth.register');
+        if(!Auth::check())
+        {
+
+            return view('User.Auth.register');
+        }
+        else {
+            return redirect()->route('home');
+        }
     }
     function showLogin(){
-        return view('User.Auth.login');
+        if(!Auth::check())
+        {
+
+            return view('User.Auth.login');
+        }
+        else {
+            return redirect()->route('home');
+        }
     }
     public function showHome()
-    {
-        return view('User.home'); 
+    {  
+         $bestSellingPCGaming=calculateTopSellingProduct("PC Gaming");
+        return view('User.home',['bestSellingPCGaming'=>$bestSellingPCGaming]); 
     }
     function showHomeAdmin(){
         return view('Admin.home');

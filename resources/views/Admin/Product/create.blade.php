@@ -51,11 +51,21 @@
         <!-- Image Upload field -->
         <div class="form-group">
             <label for="image_path">Product Image (Optional):</label>
-            <input type="file" name="image_path" class="form-control">
+            <input type="file" name="image" class="form-control">
         </div>
 
         <!-- Category field -->
-        
+        <div class="form-group">
+            <label for="category_id">Category:</label>
+            <select name="category_id" class="form-control">
+                <option value="">Select a category</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
 
         <!-- Submit button -->
         <div class="form-group">
