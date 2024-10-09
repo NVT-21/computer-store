@@ -26,8 +26,8 @@ class ProductRequest extends FormRequest
             'stock' => 'required|integer',
             'price' => 'required|integer',
             'sale_price' => 'nullable|integer',
-            'image_path' => 'nullable|string',
-            // 'category_id' => 'required|exists:categories,id',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'category_id' => 'required|exists:categories,id',
         ];
     }
 
@@ -46,7 +46,6 @@ class ProductRequest extends FormRequest
             
             'sale_price.integer' => 'The sale price must be an integer.',
             
-            'image_path.string' => 'The image path must be a string.',
             
             'category_id.required' => 'The category is required.',
             'category_id.exists' => 'The selected category is invalid.',
