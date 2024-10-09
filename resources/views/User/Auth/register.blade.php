@@ -17,8 +17,8 @@
 												@csrf
 												<h2 class="title24 title-form-account">REGISTER</h2>
 												<p>
-													<label>Username <span class="required">*</span></label>
-													<input type="text" name="username" />
+													<label>FullName <span class="required">*</span></label>
+													<input type="text" name="fullname" />
 												</p>
 												<p>
 													<label>Email address <span class="required">*</span></label>
@@ -27,6 +27,21 @@
 														<span class="text-danger">{{ $errors->first('email') }}</span>
 													@endif
 												</p>
+												<p>
+													<label>Address <span class="required">*</span></label>
+													<input type="text" name="address" />
+													@if ($errors->has('address'))
+														<span class="text-danger">{{ $errors->first('address') }}</span>
+													@endif
+												</p>
+												<p>
+													<label>Date of Birth <span class="required">*</span></label>
+													<input type="date" name="birthday" />
+													@if ($errors->has('birthday'))
+														<span class="text-danger">{{ $errors->first('birthday') }}</span>
+													@endif
+												</p>
+
 												<p>
 													<label>Password <span class="required">*</span></label>
 													<input type="password" name="password" />

@@ -19,5 +19,15 @@ class ProductService extends BaseService
     {
         return $this->productRepository;
     }
+    public function getProductsByCategory($categoryId,$limit=9){
+        return $this->productRepository->getProductsByCategory($categoryId,$limit);
+    }
+    public function getProductsByBrand($brandId,$limit=9){
+        return $this->productRepository->getProductsByBrand($brandId,$limit);
+    }
+    public function getProductsByPrice($minPrice,$maxPrice)
+    {
+        return $this->productRepository->getProductsByPrice($minPrice,$maxPrice);
+    }
    
 }

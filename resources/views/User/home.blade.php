@@ -11,10 +11,11 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/slide1.jpg" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-								<h3 class="title30 crim-font font-bold">Fashion & Live</h3>
-								<h2 class="title48 crim-font font-bold color">women’s</h2>
-								<h3 class="title30 crim-font font-bold">new collection</h3>
-								<a href="#" class="shop-button bg-white">Shop now</a>
+							<h3 class="title30 crim-font font-bold">Technology & Innovation</h3>
+							<h2 class="title48 crim-font font-bold color">Best-Selling PCs</h2>
+							<h3 class="title30 crim-font font-bold">Latest Collection</h3>
+							<a href="#" class="shop-button bg-white">Shop Now</a>
+
 							</div>
 						</div>
 					</div>
@@ -22,10 +23,11 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/slide2.jpg" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-								<h3 class="title30 crim-font font-bold">love summer</h3>
-								<h2 class="title48 crim-font font-bold color">fashion</h2>
-								<h3 class="title30 crim-font font-bold">up to 60% off</h3>
-								<a href="#" class="shop-button bg-white">Shop now</a>
+							<h3 class="title30 crim-font font-bold">Power Up Your Workspace</h3>
+							<h2 class="title48 crim-font font-bold color">Laptops & PCs</h2>
+							<h3 class="title30 crim-font font-bold">Up to 20% Off</h3>
+							<a href="#" class="shop-button bg-white">Shop Now</a>
+
 							</div>
 						</div>
 					</div>
@@ -33,10 +35,11 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/slide3.jpg" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-								<h3 class="title30 crim-font font-bold">collection summer</h3>
-								<h2 class="title48 crim-font font-bold color">clothing</h2>
-								<h3 class="title30 crim-font font-bold">for kids</h3>
-								<a href="#" class="shop-button bg-white">Shop now</a>
+							<h3 class="title30 crim-font font-bold">Summer Collection</h3>
+							<h2 class="title48 crim-font font-bold color">Tech Gadgets</h2>
+							<h3 class="title30 crim-font font-bold">For All Ages</h3>
+							<a href="#" class="shop-button bg-white">Shop Now</a>
+
 							</div>
 						</div>
 					</div>
@@ -49,8 +52,8 @@
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad1.jpg" alt="" /></a>
 							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">fashion</h3>
-								<p class="desc black">Up to <span class="title18 font-bold color">50% off</span></p>
+								<h3 class="title18 text-uppercase font-bold crim-font">PC</h3>
+								<p class="desc black">Up to <span class="title18 font-bold color">20% off</span></p>
 							</div>
 						</div>
 					</div>
@@ -58,8 +61,8 @@
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad2.jpg" alt="" /></a>
 							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">beauty</h3>
-								<p class="desc black">From <span class="title18 font-bold color">$19.00</span></p>
+								<h3 class="title18 text-uppercase font-bold crim-font">LapTop Gaming</h3>
+								<p class="desc black">From <span class="title18 font-bold color">$690.00</span></p>
 							</div>
 						</div>
 					</div>
@@ -67,7 +70,7 @@
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad3.jpg" alt="" /></a>
 							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">Smartphone</h3>
+								<h3 class="title18 text-uppercase font-bold crim-font">office laptop</h3>
 								<p class="desc black">From <span class="title18 font-bold color">$359.00</span></p>
 							</div>
 						</div>
@@ -76,8 +79,8 @@
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad4.jpg" alt="" /></a>
 							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">Bella</h3>
-								<p class="desc black">Vince Camuto</p>
+								<h3 class="title18 text-uppercase font-bold crim-font">Mouse</h3>
+			
 							</div>
 						</div>
 					</div>
@@ -85,119 +88,10 @@
 			</div>
 			<!-- End Adv -->
 			<div class="block-product1">
-				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>New Arrivals</h2>
+				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>Best-selling PC</h2>
 				<div class="product-slider">
 					<div class="wrap-item group-navi rect-navi" data-pagination="false" data-navigation="true" data-itemscustom="[[0,1],[560,2],[768,3],[990,4],[1200,5]]">
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-01.jpg" alt="" /></a>
-								<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$359.00</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-								<div class="product-extra-link">
-									<a href="#" class="addcart-link">Add to Cart</a>
-									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-									<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="item-product item-product1 item-product-onsale">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-09.jpg" alt="" /></a>
-								<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<del class="silver">$718.00</del>
-									<ins class="color title18 font-bold">$359.00</ins>
-									<label class="percent-sale">-50%</label>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-								<div class="product-extra-link">
-									<a href="#" class="addcart-link">Add to Cart</a>
-									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-									<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/beauty/marketsale-beauty-09.jpg" alt="" /></a>
-								<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$359.00</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-								<div class="product-extra-link">
-									<a href="#" class="addcart-link">Add to Cart</a>
-									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-									<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-12.jpg" alt="" /></a>
-								<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$359.00</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-								<div class="product-extra-link">
-									<a href="#" class="addcart-link">Add to Cart</a>
-									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-									<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-06.jpg" alt="" /></a>
-								<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$359.00</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-								<div class="product-extra-link">
-									<a href="#" class="addcart-link">Add to Cart</a>
-									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-									<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-05.jpg" alt="" /></a>
-								<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$359.00</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-								<div class="product-extra-link">
-									<a href="#" class="addcart-link">Add to Cart</a>
-									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-									<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-								</div>
-							</div>
-						</div>
+						@foreach ($bestSellingPCGaming as $Pc)
 						<div class="item-product item-product1">
 							<div class="product-thumb">
 								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-04.jpg" alt="" /></a>
@@ -205,10 +99,10 @@
 							</div>
 							<div class="product-info">
 								<div class="product-price">
-									<ins class="color title18 font-bold">$359.00</ins>
+									<ins class="color title18 font-bold">$ {{$Pc->product_price}}</ins>
 								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-								<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
+								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">{{ $Pc->product_name }}</a></h3>
+								<a href="#" class="cat-parent silver">Quantity Sold <span class="title10 silver">({{$Pc ->total_sold}})</span></a>
 								<div class="product-extra-link">
 									<a href="#" class="addcart-link">Add to Cart</a>
 									<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
@@ -216,6 +110,7 @@
 								</div>
 							</div>
 						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>
@@ -236,7 +131,7 @@
 			</div>
 			<!-- End Product Adv -->
 			<div class="block-product1">
-				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>best sellers</h2>
+				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>best-selling gaming laptop</h2>
 				<div class="product-slider">
 					<div class="wrap-item group-navi rect-navi" data-pagination="false" data-navigation="true" data-itemscustom="[[0,1],[560,2],[768,3],[990,4],[1200,5]]">
 						<div class="item-product item-product1">
@@ -1188,27 +1083,6 @@
 		</div>
 	</div>
 	
-	<!-- End Newsletter Popup -->
-	<div class="wishlist-mask">
-		<div class="wishlist-popup">
-			<span class="popup-icon"><i class="fa fa-bullhorn" aria-hidden="true"></i></span>
-			<p class="wishlist-alert">"Aztheme Product" was added to wishlist</p>
-			<div class="wishlist-button">
-				<a href="#">Continue Shopping (<span class="wishlist-countdown">5</span>)</a>
-				<a href="#">Go To Shopping Cart</a>
-			</div>
-		</div>
-	</div>
-	<div id="loading">
-		<div id="loading-center">
-			<div id="loading-center-absolute">
-				<div class="object" id="object_four"></div>
-				<div class="object" id="object_three"></div>
-				<div class="object" id="object_two"></div>
-				<div class="object" id="object_one"></div>
-			</div>
-		</div>
-	</div>
 	<!-- End Preload -->
 	<a href="#" class="scroll-top dark"><i class="fa fa-angle-double-up"></i></a>
 @endsection
