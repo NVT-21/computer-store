@@ -3,7 +3,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\CategoryController;
 // Route::post("/register",[AuthController::class,'register'])->name('api.register');
 // Route::post('/login', [AuthController::class, 'login'])->name('api.login');
 Route::middleware('web')->group(function () {
@@ -15,4 +15,5 @@ Route::put('/user/changePassword', [UserController::class, 'changePassword'])->n
 
 Route::middleware('web')->group(function () {
 Route::apiResource('/products', ProductController::class);
+Route::post('categories',[CategoryController::class,'store'])->name('api.categories.store');
 });

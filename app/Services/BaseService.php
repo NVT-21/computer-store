@@ -19,7 +19,9 @@ abstract class BaseService
 
     // Phương thức abstract yêu cầu các class con phải triển khai
     abstract public function getRepository();
-
+    public function getAll(){
+        return $this->repository->getAll();
+    }
     public function create($data)
     {
         DB::beginTransaction();

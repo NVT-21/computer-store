@@ -22,9 +22,11 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required',
+            'fullname' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
+            'birthday' => 'required|date',
+        'address' => 'required|max:255',
             // Các trường khác
         ];
     }
@@ -36,12 +38,17 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => 'Vui lòng nhập email.',
-            'email.email' => 'Email không h��p lệ.',
-            'email.unique' => 'Email đã tồn tại.',
-            'password.required' => 'Vui lòng nhập mật khẩu.',
-            'password.min' => 'Mật khẩu phải có ít nhất 6 ký tự.',
-            'password.confirmed' => 'Mật khẩu xác nhận không trùng nhau.',
+            'email.required' => 'Please enter your email.',
+            'email.email' => 'The email address is not valid.',
+            'email.unique' => 'This email address already exists.',
+            'password.required' => 'Please enter your password.',
+            'password.min' => 'The password must be at least 6 characters.',
+            'password.confirmed' => 'The password confirmation does not match.',
+            'birthday.required' => 'Please enter your date of birth.',
+            'birthday.date' => 'The date of birth is not valid.',
+            'address.required' => 'Please enter your address.',
+            'address.max' => 'The address may not be greater than 255 characters.',
         ];
+        
     }
 }
