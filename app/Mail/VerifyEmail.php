@@ -8,17 +8,18 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-
+use App\Models\User;
 class VerifyEmail extends Mailable
 {
     use Queueable, SerializesModels;
+    protected $user;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -38,6 +39,7 @@ class VerifyEmail extends Mailable
     {
         return new Content(
             view: 'emails.verify_email',
+            with: ['user' => $this->user]
         );
     }
 

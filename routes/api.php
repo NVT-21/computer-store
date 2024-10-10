@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Middleware\IsVerifiedEmail;
 // Route::post("/register",[AuthController::class,'register'])->name('api.register');
 // Route::post('/login', [AuthController::class, 'login'])->name('api.login');
 Route::middleware('web')->group(function () {

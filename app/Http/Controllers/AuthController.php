@@ -21,34 +21,22 @@ class AuthController extends Controller
     function register(UserRequest $request){
         $data =  $request->validated();
        $user= $this->userService->register($data);
-        // Mail::to($user->email)->send(new EmailVerification($user));
-        return back()->with('success', "Register successfully");
-    }
-    function sendEmail()
-    {
-          Mail::to('phuhao@gmail.com')->send(new VerifyEmail());
-          return "send Email";
+        Mail::to($user->email)->send(new VerifyEmail($user));
+        return redirect()->route('verification.verify')->with("user", $user);
+        // return back()->with('success', "Register successfully");
     }
     
     function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-        
-        // Gọi service để đăng nhập
-        $user = $this->userService->login($credentials);
-        
-        // Kiểm tra nếu đăng nhập thất bại
-        if (!$user) {
-            return back()->with('error', 'Invalid email or password')->withInput($request->only('email'));
-        }
-        
-        // Lấy danh sách role của user
-        $idRoles = $user->roles->pluck('id')->toArray();
-        
-        // Thông báo đăng nhập thành công
        
+        $result = $this->userService->login($credentials);
         
-        // Kiểm tra nếu user là admin
+        if (!$result['success']) {
+            return back()->with('error', $result['message'])->withInput($request->only('email'));
+        }
+      
+        $idRoles = $result->roles->pluck('id')->toArray();
         if (isAdmin($idRoles)) {
             return redirect()->route('admin.home')->with('success', 'Login successful');
         } else {
@@ -88,6 +76,19 @@ class AuthController extends Controller
     }
     function showHomeAdmin(){
         return view('Admin.home');
+    }
+    public function showVerifiedPassword(){
+        return view('User.Auth.verified-password');
+    }
+    public function verifyEmail(Request $request){
+        $result=$this->userService->verifiedPassword($request->all());
+        if($result['success']){
+            return redirect()->route('login')->with("success","Successfully verified");
+        }
+        else {
+            return back()->with("error","Failed to verify");
+        }
+
     }
    
 }
