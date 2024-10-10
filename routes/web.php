@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Middleware\IsVerifiedEmail;
 use App\Mail\EmailVerification;
 
 
@@ -18,10 +19,11 @@ Route::get('/products/create', [ProductController::class, 'create'])->name('prod
 Route::get('/products', [ProductController::class, 'index'])->name('product.index');
 Route::get('categories/create',[CategoryController::class,'create'])->name('api.categories.create');
 Route::middleware('auth')->group(function () {
-    Route::get("/home/admin",[AuthController::class, 'showHomeAdmin'])->name('admin.home');
-    Route::get('/home', [AuthController::class, 'showHome'])->name('home');
-    Route::get("/logOut",[AuthController::class, 'logOut'])->name('logOut');
-    Route::get('/my-profile', [UserController::class, 'showProfile'])->name('profile');
+        Route::get("/home/admin",[AuthController::class, 'showHomeAdmin'])->name('admin.home');
+        Route::get('/home', [AuthController::class, 'showHome'])->name('home');
+        Route::get("/logOut",[AuthController::class, 'logOut'])->name('logOut');
+        Route::get('/my-profile', [UserController::class, 'showProfile'])->name('profile');
+    
 
 });
 
@@ -33,5 +35,9 @@ Route::get('/products/getProductsByPrice/{minPrice}/{maxPrice}',[ProductControll
 Route::get('/products/listView',[ProductController::class,'showViewListProducts'])->name('product.listView');
 Route::get("/carts",[ProductController::class,'showCart'])->name('product.cart');
 Route::post('/add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('cart.add');
+
+//verify password 
+Route::get('/verify-password',[AuthController::class,'showVerifiedPassword'])->name('showVerifyPassword');
+Route::post('/verify-password',[AuthController::class,'verifyEmail'])->name('verification.verify');
 
 

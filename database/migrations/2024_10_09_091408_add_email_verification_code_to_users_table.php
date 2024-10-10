@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('email_verification_code')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
-            //
+             $table->boolean('is_verified')->default(false);
         });
     }
 
@@ -25,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('email_verification_code');
-            $table->dropColumn('email_verified_at');
+             $table->dropColumn('is_verified');
         });
     }
 };
