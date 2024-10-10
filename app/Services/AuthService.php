@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Str;
 Class AuthService 
 {
     protected $userRepository;
@@ -20,6 +20,9 @@ Class AuthService
         $data['password'] = Hash::make($data['password']);
         $newUser= $this->userRepository->create($data);
         $newUser->roles()->attach(Role::ROLE_USER);
+        $otpCode = Str::random(6);
+        $newUser->email_verification_code = $otpCode;
+        $newUser->save();
         return $newUser;
 
     }

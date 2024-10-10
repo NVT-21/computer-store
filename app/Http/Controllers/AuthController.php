@@ -21,13 +21,8 @@ class AuthController extends Controller
     function register(UserRequest $request){
         $data =  $request->validated();
        $user= $this->userService->register($data);
-        // Mail::to($user->email)->send(new EmailVerification($user));
+        Mail::to($user->email)->send(new VerifyEmail($user));
         return back()->with('success', "Register successfully");
-    }
-    function sendEmail()
-    {
-          Mail::to('phuhao@gmail.com')->send(new VerifyEmail());
-          return "send Email";
     }
     
     function login(Request $request)
