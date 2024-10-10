@@ -55,7 +55,7 @@ class UserController
         $user =$this->authService->getUser();
         if($user==null) return abort(404,"User does not exist");
         $data = [
-            'username' => $request->input("username")
+            'fullname' => $request->input("fullname")
         ];
         $idUser=$user->id;
          $this->userService->update($idUser,$data);
@@ -68,7 +68,7 @@ class UserController
         if($user==null) return abort(404,"User does not exist");
         if(!Hash::check($data['current_password'],$user->password))
         {
-             return back()->with("message","password current not correct");   
+             return back()->with("error","password current not correct");   
         }
         $user->password = Hash::make($data['new_password']);
         $this->userService->update($user->id, $data);
