@@ -30,11 +30,21 @@ Class AuthService
     {
         // Sử dụng Auth::attempt() để kiểm tra thông tin đăng nhập
         if (Auth::attempt($credentials)) {
-            // Trả về đối tượng người dùng hiện tại sau khi đăng nhập thành công
+            if(!Auth::user()->is_verified)
+            {
+                Auth::logout();
+                return [
+                    'success' => false,
+                   'message' => "User is not verified",
+                ];
+            }
             return Auth::user();
         } else {
             // Đăng nhập thất bại
-            return null;
+            return [
+                'success' => false,
+               'message' => "Invalid email or password",
+            ];
         }
     }
     public function getUser(){
@@ -44,6 +54,28 @@ Class AuthService
         }
         else {
            return null;
+        }
+    }
+    public function verifiedPassword($data)
+    {
+        $otpCode =$data['otp_code'];
+        $email = $data['email'];
+        $user = $this->userRepository->findByEmailVerificationCode($email,$otpCode);
+        if($user)
+        {
+            $user->is_verified=true;
+            $user->save();
+                return [
+                    'success' => true,
+                    'message' => "verify successfully",
+                ];
+        }
+        else {
+            return [
+                'success' => false,
+                'message' => "verify failed",
+            ];
+
         }
     }
     

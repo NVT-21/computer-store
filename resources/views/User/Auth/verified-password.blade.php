@@ -10,10 +10,12 @@
 
     <form action="{{ route('verification.verify') }}" method="POST">
         @csrf
-        <div class="form-group">
-            <label for="email">Email Address:</label>
-            <input type="email" name="email" class="form-control" required>
-        </div>
+        @if(session('user'))
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" value="{{ session('user')->email }}" class="form-control" readonly>
+            </div>
+        @endif
 
         <div class="form-group">
             <label for="otp_code">Verification Code:</label>
