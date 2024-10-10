@@ -19,5 +19,7 @@ class CategoryService extends BaseService
     {
         return $this->CategoryRepository;
     }
-   
+   public function  getCategoriesWithProduct() {
+    return $this->CategoryRepository->getCategoriesWithProducts();
+   }
 }

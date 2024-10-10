@@ -25,7 +25,7 @@ class CategoryController
      */
     public function create()
     {
-        //
+        return view ('Admin.Product.create-category');
     }
 
     /**
@@ -33,8 +33,10 @@ class CategoryController
      */
     public function store(Request $request)
     {
-        $name=$request['name'];
-        $result=$this->CategoryService->create($name);
+        $data=[
+            "name"=>$request['name'],
+        ];
+        $result=$this->CategoryService->create($data);
         if($result['success']){
             return back()->with("success","Successfully created");
         }
