@@ -15,8 +15,8 @@ Make sure your local machine has the following installed:
 
 
 ## Then run command :
-composer install
-php artisan migrate
+- composer install
+- php artisan migrate
 ## Run the application 
 Finally, run the following command to start the local development server:
 php artisan serve
