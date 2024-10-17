@@ -11,20 +11,8 @@ Make sure your local machine has the following installed:
   ## Installation
   
 ### After git clone, open the .env file and set up your environment variables. Make sure to configure the following:
-APP_NAME=Laravel
-APP_ENV=local
-APP_KEY=
-APP_DEBUG=true
-APP_URL=http://localhost
+![image](https://github.com/user-attachments/assets/d90f1507-2415-4c77-9088-6c29508bf9f1)
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=your_database_name
-DB_USERNAME=your_database_user
-DB_PASSWORD=your_database_password :
-composer install
-php artisan migrate
 
 ## Then run command :
 composer install
