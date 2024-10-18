@@ -72,7 +72,8 @@ class AuthController extends Controller
     public function showHome()
     {  
          $bestSellingPCGaming=calculateTopSellingProduct("PC Gaming");
-        return view('User.home',['bestSellingPCGaming'=>$bestSellingPCGaming]); 
+         $bestSellingLapTop=calculateTopSellingProduct("LapTop");
+        return view('User.home',['bestSellingPCGaming'=>$bestSellingPCGaming,'bestSellingLapTop'=>$bestSellingLapTop]); 
     }
     function showHomeAdmin(){
         return view('Admin.home');

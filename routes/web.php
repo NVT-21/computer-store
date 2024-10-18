@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Middleware\IsVerifiedEmail;
 use App\Mail\EmailVerification;
@@ -35,9 +36,15 @@ Route::get('/products/getProductsByPrice/{minPrice}/{maxPrice}',[ProductControll
 Route::get('/products/listView',[ProductController::class,'showViewListProducts'])->name('product.listView');
 Route::get("/carts",[ProductController::class,'showCart'])->name('product.cart');
 Route::post('/add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('cart.add');
+Route::get("/searchProduct",[ProductController::class, 'showProductBySearch'])->name('product.searchProduct');
+Route::get('/product-detail/{idProduct}',[ProductController::class, 'showProductDetail'])->name('product.productDetail');
+Route::delete('/cart/remove/{id}', [ProductController::class, 'removeProductOfCart'])->name('cart.remove');
+Route::get('/check-out',[ProductController::class, 'showViewCheckOut'])->name('product.check-out');
 
 //verify password 
 Route::get('/verify-password',[AuthController::class,'showVerifiedPassword'])->name('showVerifyPassword');
 Route::post('/verify-password',[AuthController::class,'verifyEmail'])->name('verification.verify');
+//order 
+Route::post('/store-order',[OrderController::class, 'storeOrder'])->name('order.storeOrder');
 
 
