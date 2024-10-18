@@ -11,9 +11,11 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
     protected $fillable = [
-        'username',
+        'fullname',
         'email',
         'password',
+        'address',
+        'birthday',
         'imagePath'
     ];
     public function people()
@@ -23,5 +25,9 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class);
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }

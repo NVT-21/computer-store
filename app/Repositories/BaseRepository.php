@@ -96,4 +96,5 @@ abstract class BaseRepository {
        return $query->paginate($limit);
 
     }
+
 }
