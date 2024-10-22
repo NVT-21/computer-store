@@ -1,7 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container">
+<div class="content-wrapper">
+<section class="content">
     <h2>Products</h2>
 
     @if ($products->count())
@@ -39,5 +40,6 @@
     @else
         <p>No products found.</p>
     @endif
+</section>
 </div>
 @endsection

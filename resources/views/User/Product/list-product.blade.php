@@ -47,93 +47,6 @@
 								</div>
 							</div>
 							<!-- End Widget -->
-							<div class="widget widget-product item-list-cat1 style2">
-								<h2 class="title14 font-bold text-uppercase white"><i class="fa fa-diamond"></i> Special products</h2>
-								<div class="widget-content">
-									<ul class="list-none bg-white">
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-03.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-04.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<ins class="color title18 font-bold">$359.00</ins>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/jewelry/market-jewelry-17.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/beauty/marketsale-beauty-09.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/beauty/marketsale-beauty-16.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-									</ul>
-									<a href="#" class="bg-color white viewall"><i class="fa fa-plus-square-o"></i> <span class="white">View All Beauty</span></a>
-								</div>
-							</div>
-							<!-- End Widget -->
 						</aside>
 					</div>
 					<div class="col-md-9 col-sm-8 col-xs-12">
@@ -254,8 +167,11 @@
                                         </div>
                                         <h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">${product.name}</a></h3>
                                         <a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
+										<form action="{{ route('cart.add', $product->id) }}" method="POST">
+											@csrf
+											<button type="submit" class="btn btn-primary">Add to Cart</button>
+											</form>
                                         <div class="product-extra-link">
-                                            <a href="#" class="addcart-link">Add to Cart</a>
                                             <a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
                                             <a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
                                         </div>
@@ -326,8 +242,11 @@
                                         </div>
                                         <h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">${product.name}</a></h3>
                                         <a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
+										<form action="{{ route('cart.add', $product->id) }}" method="POST">
+											@csrf
+											<button type="submit" class="btn btn-primary">Add to Cart</button>
+											</form>
                                         <div class="product-extra-link">
-                                            <a href="#" class="addcart-link">Add to Cart</a>
                                             <a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
                                             <a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
                                         </div>

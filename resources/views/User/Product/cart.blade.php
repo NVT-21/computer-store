@@ -2,6 +2,9 @@
 @section('title', 'Cart')
 
 @section('content')
+@php
+    $total = 0; // Initialize total
+@endphp
 <div id="content">
 		<div class="content-page woocommerce"> 
 			<div class="container">
@@ -23,9 +26,14 @@
 								</thead>
 								<tbody>
 								@foreach(session('cart') as $id => $details)
-									<tr class="cart_item">
+								@php
+								// Calculate subtotal for each product and add it to the total
+								$subtotal = $details['price'] * $details['quantity'];
+								$total += $subtotal;
+								@endphp
+									<tr class="cart_item" data-id="{{ $id }}">
 										<td class="product-remove">
-											<a class="remove" href="#"><i class="fa fa-trash"></i></a>
+											<a class="removeProductOfCart" href="#"><i class="fa fa-trash"></i></a>
 										</td>
 										<td class="product-thumbnail">
 											<a href="#"><img  src="images/product/fashion/marketsale-watch-11.jpg" alt=""/></a>					
@@ -55,7 +63,7 @@
 												<input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code"> 
 												<input type="submit" value="Apply Coupon" name="apply_coupon" class="button bg-color">
 											</div>
-											<input type="submit" value="Update Cart" name="update_cart" class="button bg-color">			
+											
 										</td>
 									</tr>
 									
@@ -69,10 +77,6 @@
 							<div class="table-responsive">
 								<table class="table">
 									<tbody>
-										<tr class="cart-subtotal">
-											<th>Subtotal</th>
-											<td><strong class="amount">$106.00</strong></td>
-										</tr>
 										<tr class="shipping">
 											<th>Shipping</th>
 											<td>
@@ -93,14 +97,14 @@
 											</td>
 										</tr>
 										<tr class="order-total">
-											<th>Total</th>
-											<td><strong><span class="amount">$106.00</span></strong> </td>
+										<th>Total</th>
+										<td><strong><span class="amount">${{ $total }}</span></strong></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 							<div class="wc-proceed-to-checkout">
-								<a class="checkout-button button alt wc-forward bg-color" href="#">Proceed to Checkout</a>
+								<a class="checkout-button button alt wc-forward bg-color" href="/check-out">Proceed to Checkout</a>
 							</div>
 						</div>
 					</div>
@@ -118,18 +122,58 @@ $('.qty-up').click(function(e) {
     var $row = $(this).closest('tr'); // Get the closest row
     var $quantityElem = $row.find('.qty-val'); // Find quantity element
     var quantity = parseInt($quantityElem.text()); // Get current quantity
-	var priceText = $row.find('.product-price .amount').text(); // Get price from data attribute
+	var priceText = $row.find('.product-price .amount').text().replace(/[^0-9.]/g, ''); // Get price from data attribute
 	console.log(priceText);
 
-    // Increase quantity
-    quantity++;
+
 	console.log(quantity);
     $quantityElem.text(quantity); // Update quantity display
 
     // Calculate subtotal
-    var subtotal = (priceText*1) * quantity;
+    const subtotal = (priceText*1) * (quantity*1+1);
 	console.log(subtotal);
-    $row.find('.product-subtotal .amount').text('$' + subtotal.toFixed(2)); // Update subtotal display
+    $row.find('.product-subtotal .amount').text('$' + subtotal.toFixed(2)); 
+	updateTotalPrice();
+	// Update subtotal display
+});
+function updateTotalPrice() {
+    var total = 0;
+
+    // Loop through each product row and sum up the subtotals
+    $('.cart_item').each(function() {
+        var subtotalText = $(this).find('.product-subtotal .amount').text().replace(/[^0-9.]/g, ''); // Get subtotal text and remove non-numeric characters
+        var subtotal = parseFloat(subtotalText); // Convert to number
+        total += subtotal; // Add to total
+    });
+
+    // Update the total price display
+    $('.order-total .amount').text('$' + total.toFixed(2));
+}
+$('.removeProductOfCart').click(function(e) {
+    e.preventDefault();
+    
+    var $row = $(this).closest('tr'); // Get the closest row (product row)
+    const productId = $row.data('id'); // Get the product ID (You should store the ID in a data attribute)
+
+    // Send AJAX request to remove the product
+    $.ajax({
+        url: '/cart/remove/' + productId, // Laravel route to handle product removal
+        type: 'DELETE',
+        data: {
+            _token: '{{ csrf_token() }}' // Ensure CSRF token is sent with the request
+        },
+        success: function(response) {
+            if (response.success) {
+                // Remove the product row from the cart UI
+                $row.remove();
+
+                // Recalculate the total price
+                updateTotalPrice();
+            } else {
+                alert('Failed to remove the product.');
+            }
+        }
+    });
 });
 
 // Khi nhấn nút giảm số lượng
@@ -137,17 +181,16 @@ $('.qty-down').click(function(e) {
     e.preventDefault();
     var $row = $(this).closest('tr'); // Get the closest row
     var $quantityElem = $row.find('.qty-val'); // Find quantity element
-    var quantity = parseInt($quantityElem.text()); // Get current quantity
-    var price = parseFloat($row.find('.product-price').data('price')); // Get price from data attribute
-
+	var quantity = parseInt($quantityElem.text()); // Get current quantity
+	var priceText = $row.find('.product-price .amount').text().replace(/[^0-9.]/g, ''); // Get price from data attribute
+	console.log(quantity)
     // Decrease quantity but not below 1
     if (quantity > 1) {
-        quantity--;
-        $quantityElem.text(quantity); // Update quantity display
 
-        // Calculate subtotal
-        var subtotal = price * quantity;
-        $row.find('.product-subtotal .amount').text('$' + subtotal.toFixed(2)); // Update subtotal display
+		const subtotal = (priceText*1) * (quantity*1-1);
+		console.log(subtotal);
+		$row.find('.product-subtotal .amount').text('$' + subtotal.toFixed(2)); 
+		updateTotalPrice();
     }
 });
 

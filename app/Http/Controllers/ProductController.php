@@ -149,4 +149,36 @@ class ProductController
         // Chuyển hướng về trang giỏ hàng với thông báo thành công
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
+    public function removeProductOfCart($id)
+{
+    // Get the cart from the session
+    $cart = session()->get('cart');
+
+    // If the product exists in the cart, remove it
+    if (isset($cart[$id])) {
+        unset($cart[$id]);
+        session()->put('cart', $cart); // Update the session with the new cart
+    }
+
+    // Optionally return updated cart or success response
+    return response()->json([
+        'success' => true,
+        'message' => 'Product removed successfully',
+        'cart' => $cart 
+    ]);
+}
+
+    public function showProductBySearch(Request $request)
+    {   $keyword = $request->query('s');
+         $products=$this->productService->paginate($keyword,9);
+        return  view('User.Product.list-view',['products'=>$products]);
+    }
+    public function showProductDetail($idProduct)
+    {   $product=$this->productService->getById($idProduct);
+        return view('User.Product.product-detail',['product'=>$product]);
+    }
+    public function showViewCheckOut()
+    {
+        return view('User.Product.check-out');
+    }
 }

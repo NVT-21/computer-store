@@ -16,6 +16,7 @@ function isAdmin(array $roles = []): bool {
         try {
             $bestSellingProducts = DB::table('sales')
                 ->select(
+                    'products.id as id',
                     'products.name as product_name',
                     'categories.name as category_name',
                     'products.price as product_price',

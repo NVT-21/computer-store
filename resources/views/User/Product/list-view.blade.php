@@ -9,98 +9,6 @@
 					<div class="col-md-3 col-sm-4 col-xs-12">
 						<aside class="sidebar sidebar-left">
 						
-							
-							<!-- End Widget -->
-							
-							<!-- End Widget -->
-						
-							<!-- End Widget -->
-							<div class="widget widget-product item-list-cat1 style2">
-								<h2 class="title14 font-bold text-uppercase white"><i class="fa fa-diamond"></i> Special products</h2>
-								<div class="widget-content">
-									<ul class="list-none bg-white">
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-03.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-04.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<ins class="color title18 font-bold">$359.00</ins>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/jewelry/market-jewelry-17.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/beauty/marketsale-beauty-09.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="item-product table-custom item-product-onsale">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/beauty/marketsale-beauty-16.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-												<div class="product-info">
-													<div class="product-price">
-														<del class="silver">$718.00</del>
-														<ins class="color title18 font-bold">$359.00</ins>
-														<label class="percent-sale">-50%</label>
-													</div>
-													<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">Aztheme Product</a></h3>
-												</div>
-											</div>
-										</li>
-									</ul>
-									<a href="#" class="bg-color white viewall"><i class="fa fa-plus-square-o"></i> <span class="white">View All Beauty</span></a>
-								</div>
-							</div>
 							<!-- End Widget -->
 						</aside>
 					</div>
@@ -152,50 +60,26 @@
 						<!-- End Title -->
 						<div class="product-list-view">
 							<div class="row">
-								<div class="col-md-12">
-									<div class="item-product item-product-list">
-										<div class="row">
-											<div class="col-md-4 col-sm-4 col-xs-12">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-01.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-											</div>
-											<div class="col-md-8 col-sm-8 col-xs-12">
-												<div class="product-info">
-													<h3 class="title18 font-bold product-title"><a href="product-detail.html">Aztheme Product</a></h3>
-													<div class="product-price">
-														<ins class="color title18 font-bold">$359.00</ins>
-													</div>
-													<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-													<p class="desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-													<div class="product-extra-link">
-														<a href="#" class="addcart-link">Add to Cart</a>
-														<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-														<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								@if ($products == null || $products->isEmpty())
+								<p>Not found</p>
+								@else
+								@foreach ($products as $product )
 								<div class="col-md-12">
 									<div class="item-product item-product-list">
 										<div class="row">
 											<div class="col-md-4 col-sm-4 col-xs-12">
 												<div class="product-thumb">
 													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-02.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
+													<a href="/product-detail/{{$product->id}}" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
 												</div>
 											</div>
 											<div class="col-md-8 col-sm-8 col-xs-12">
 												<div class="product-info">
-													<h3 class="title18 font-bold product-title"><a href="product-detail.html">Aztheme Product</a></h3>
+													<h3 class="title18 font-bold product-title"><a href="product-detail.html">{{$product->name}}</a></h3>
 													<div class="product-price">
-														<ins class="color title18 font-bold">$359.00</ins>
+														<ins class="color title18 font-bold">${{$product->price}}</ins>
 													</div>
 													<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-													<p class="desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 													<div class="product-extra-link">
 														<a href="#" class="addcart-link">Add to Cart</a>
 														<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
@@ -206,66 +90,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-12">
-									<div class="item-product item-product-list">
-										<div class="row">
-											<div class="col-md-4 col-sm-4 col-xs-12">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-03.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-											</div>
-											<div class="col-md-8 col-sm-8 col-xs-12">
-												<div class="product-info">
-													<h3 class="title18 font-bold product-title"><a href="product-detail.html">Aztheme Product</a></h3>
-													<div class="product-price">
-														<ins class="color title18 font-bold">$359.00</ins>
-													</div>
-													<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-													<p class="desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-													<div class="product-extra-link">
-														<a href="#" class="addcart-link">Add to Cart</a>
-														<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-														<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="item-product item-product-list">
-										<div class="row">
-											<div class="col-md-4 col-sm-4 col-xs-12">
-												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-04.jpg" alt=""></a>
-													<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-												</div>
-											</div>
-											<div class="col-md-8 col-sm-8 col-xs-12">
-												<div class="product-info">
-													<h3 class="title18 font-bold product-title"><a href="product-detail.html">Aztheme Product</a></h3>
-													<div class="product-price">
-														<ins class="color title18 font-bold">$359.00</ins>
-													</div>
-													<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-													<p class="desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-													<div class="product-extra-link">
-														<a href="#" class="addcart-link">Add to Cart</a>
-														<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-														<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								@endforeach
+								@endif
 							</div>
 							<div class="pagi-nav text-right">
-								<a href="#" class="current">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#" class="next">next<i class="fa fa-angle-double-right"></i></a>
+							{{ $products->links() }}
 							</div>
 						</div>
 					</div>
@@ -273,44 +102,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Content -->
-	<footer id="footer">
-		<div class="block-brand1">
-			<div class="container">
-				<div class="brand-slider">
-					<div class="wrap-item" data-autoplay="true" data-pagination="false" data-itemscustom="[[0,2],[480,3],[768,4],[990,5],[1200,6]]">
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br1.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br2.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br3.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br4.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br5.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br6.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br7.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br8.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br9.png" alt="" /></a>
-						</div>
-						<div class="item-brand item-brand1 text-center">
-							<a href="#" class="wobble-horizontal"><img src="images/brand/general2/br10.png" alt="" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-        @endsection
+    @endsection
