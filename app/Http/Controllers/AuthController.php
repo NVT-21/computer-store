@@ -78,8 +78,6 @@ class AuthController extends Controller
         // Decode the responses to access their data
         $bestSellingPCGaming = $bestSellingPCGamingResponse->getData();
         $bestSellingLapTop = $bestSellingLapTopResponse->getData();
-
-        // Check if there's an error field in either response
         if (isset($bestSellingPCGaming->error) || isset($bestSellingLapTop->error)) {
             $bestSellingPCGaming = null;
             $bestSellingLapTop = null;
@@ -94,8 +92,8 @@ class AuthController extends Controller
 
     // Pass data to the view
     return view('User.home', [
-        'bestSellingPCGaming' => $bestSellingPCGaming,
-        'bestSellingLapTop' => $bestSellingLapTop,
+        'bestSellingPCGaming' =>  $bestSellingPCGamingResponse,
+        'bestSellingLapTop' =>  $bestSellingLapTopResponse,
         'error' => $error ?? null,
     ]);
 }
