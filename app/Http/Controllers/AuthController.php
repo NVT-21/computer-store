@@ -70,11 +70,36 @@ class AuthController extends Controller
         }
     }
     public function showHome()
-    {  
-         $bestSellingPCGaming=calculateTopSellingProduct("PC Gaming");
-         $bestSellingLapTop=calculateTopSellingProduct("LapTop");
-        return view('User.home',['bestSellingPCGaming'=>$bestSellingPCGaming,'bestSellingLapTop'=>$bestSellingLapTop]); 
+{  
+    try {
+        $bestSellingPCGamingResponse = calculateTopSellingProduct("PC Gaming");
+        $bestSellingLapTopResponse = calculateTopSellingProduct("LapTop");
+
+        // Decode the responses to access their data
+        $bestSellingPCGaming = $bestSellingPCGamingResponse->getData();
+        $bestSellingLapTop = $bestSellingLapTopResponse->getData();
+
+        // Check if there's an error field in either response
+        if (isset($bestSellingPCGaming->error) || isset($bestSellingLapTop->error)) {
+            $bestSellingPCGaming = null;
+            $bestSellingLapTop = null;
+            $error = "Unable to fetch top-selling products.";
+        }
+    } catch (\Exception $e) {
+        // Handle general exceptions
+        $bestSellingPCGaming = null;
+        $bestSellingLapTop = null;
+        $error = "Unable to fetch top-selling products.";
     }
+
+    // Pass data to the view
+    return view('User.home', [
+        'bestSellingPCGaming' => $bestSellingPCGaming,
+        'bestSellingLapTop' => $bestSellingLapTop,
+        'error' => $error ?? null,
+    ]);
+}
+
     function showHomeAdmin(){
         return view('Admin.home');
     }

@@ -91,7 +91,7 @@
 				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>Best-selling PC</h2>
 				<div class="product-slider">
 					<div class="wrap-item group-navi rect-navi" data-pagination="false" data-navigation="true" data-itemscustom="[[0,1],[560,2],[768,3],[990,4],[1200,5]]">
-					@if($bestSellingPCGaming->isEmpty())
+					@if($bestSellingPCGaming==null)
     <p>No best-selling gaming PCs available at the moment.</p>
 @else
     @foreach ($bestSellingPCGaming as $Pc)
@@ -146,8 +146,8 @@
 				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>best-selling laptop</h2>
 				<div class="product-slider">
 					<div class="wrap-item group-navi rect-navi" data-pagination="false" data-navigation="true" data-itemscustom="[[0,1],[560,2],[768,3],[990,4],[1200,5]]">
-					@if($bestSellingLapTop->isEmpty())
-    <p>No best-selling laptops available at the moment.</p>
+					@if($bestSellingLapTop==null)
+    		<p>No best-selling laptops available at the moment.</p>
 			@else
 				@foreach ($bestSellingLapTop as $Pc)
 					<div class="item-product item-product1">
