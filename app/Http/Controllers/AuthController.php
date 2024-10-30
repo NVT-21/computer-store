@@ -79,8 +79,8 @@ class AuthController extends Controller
         $bestSellingPCGaming = $bestSellingPCGamingResponse->getData();
         $bestSellingLapTop = $bestSellingLapTopResponse->getData();
         if (isset($bestSellingPCGaming->error) || isset($bestSellingLapTop->error)) {
-            $bestSellingPCGaming = null;
-            $bestSellingLapTop = null;
+            $bestSellingPCGamingResponse = null;
+            $bestSellingLapTopResponse = null;
             $error = "Unable to fetch top-selling products.";
         }
     } catch (\Exception $e) {
