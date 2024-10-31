@@ -103,7 +103,7 @@
 									<div class="item-product item-product1">
 										<div class="product-thumb">
 											<a href="#" class="product-thumb-link zoom-thumb"><img src="{{$product->image_path}}" alt=""></a>
-											<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
+											<a href="/product-detail/{{$product->id}}" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
 										</div>
 										<div class="product-info">
 											<div class="product-price">
