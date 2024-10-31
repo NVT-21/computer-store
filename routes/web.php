@@ -11,7 +11,7 @@ use App\Http\Middleware\IsVerifiedEmail;
 use App\Mail\EmailVerification;
 
 
-Route::get('/',[AuthController::class,'sendEmail']);
+
 Route::get("/register",[AuthController::class,'showRegister'])->name('register');
 // Route::post("/register",[AuthController::class,'register'])->name('post.register');
 Route::get("/login",[AuthController::class,'showLogin'])->name('login');
@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 });
 
 //product 
-Route::get('/home', [AuthController::class, 'showHome'])->name('home');
+Route::get('/', [AuthController::class, 'showHome'])->name('home');
 Route::get("/list-products",[ProductController::class, 'showViewProducts'])->name('product.listProducts');
 Route::get('/products/getProductsByCategory/{categoryId}', [ProductController::class,'getProductsByCategory'])->name('product.productsByCategory');
 Route::get('/products/getProductsByBrand/{brandId}',[ProductController::class,'getProductsByBrand'])->name('product.productsByBrand');

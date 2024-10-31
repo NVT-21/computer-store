@@ -1,4 +1,7 @@
+@extends('layouts.admin')
 
+@section('content')
+<div class="content-wrapper">
 <div class="container">
     <h2>Create Product</h2>
 
@@ -73,4 +76,5 @@
         </div>
     </form>
 </div>
-
+</div>
+@endsection
