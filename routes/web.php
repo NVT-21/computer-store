@@ -16,8 +16,6 @@ Route::get("/register",[AuthController::class,'showRegister'])->name('register')
 // Route::post("/register",[AuthController::class,'register'])->name('post.register');
 Route::get("/login",[AuthController::class,'showLogin'])->name('login');
 // Route::post('/login', [AuthController::class, 'login'])->name('api.login');
-Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
-Route::get('/products', [ProductController::class, 'index'])->name('product.index');
 Route::get('categories/create',[CategoryController::class,'create'])->name('api.categories.create');
 Route::middleware('auth')->group(function () {
         Route::get("/home/admin",[AuthController::class, 'showHomeAdmin'])->name('admin.home');
@@ -26,7 +24,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/check-out',[ProductController::class, 'showViewCheckOut'])->name('product.check-out');
 });
 
-//product 
+//product(user)
 Route::get('/', [AuthController::class, 'showHome'])->name('home');
 Route::get("/list-products",[ProductController::class, 'showViewProducts'])->name('product.listProducts');
 Route::get('/products/getProductsByCategory/{categoryId}', [ProductController::class,'getProductsByCategory'])->name('product.productsByCategory');
@@ -38,7 +36,10 @@ Route::post('/add-to-cart/{id}', [ProductController::class, 'addToCart'])->name(
 Route::get("/searchProduct",[ProductController::class, 'showProductBySearch'])->name('product.searchProduct');
 Route::get('/product-detail/{idProduct}',[ProductController::class, 'showProductDetail'])->name('product.productDetail');
 Route::delete('/cart/remove/{id}', [ProductController::class, 'removeProductOfCart'])->name('cart.remove');
-
+//product(admin)
+Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
+Route::get('/products', [ProductController::class, 'index'])->name('product.index');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
 //verify password 
 Route::get('/verify-password',[AuthController::class,'showVerifiedPassword'])->name('showVerifyPassword');
 Route::post('/verify-password',[AuthController::class,'verifyEmail'])->name('verification.verify');

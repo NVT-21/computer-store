@@ -23,7 +23,7 @@ class ProductController
      */
     public function index()
     {
-        $products=$this->productService->paginate(null,1);
+        $products=$this->productService->paginate(null,8);
         return view("Admin.Product.index",compact('products'));
     }
 
@@ -67,15 +67,10 @@ class ProductController
     public function show( $id)
     {
         $currentProduct=$this->productService->getById($id);
+        $categories=$this->categoryService->getAll();
+        return view("Admin.Product.edit",['product'=>$currentProduct,'categories'=>$categories]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -83,6 +78,15 @@ class ProductController
     public function update(ProductRequest $request,  $id)
     {
         $data=$request->validated();
+        if($request->hasFile("image"))
+        {
+            $file = $request->file('image');
+
+            // Generate a unique filename
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $file->move(public_path('images/product'), $filename);
+            $data['image_path'] = 'images/product/' . $filename;
+        }
         $this->productService->update($id,$data);
         return back()->with("success","Successfully updated");
     }

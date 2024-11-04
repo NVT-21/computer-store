@@ -15,7 +15,7 @@ class OrderController
             'full_name' => $request->input('full_name'),
             'phone_number' => $request->input('phone_number'),
             'address' => $request->input('address'),
-            'user_id' => $user->id, // Assuming authenticated user
+            'user_id' => $user->id, 
         ]);
         $this->saveOrderProducts($order);
         return redirect()->route('home')->with('success', 'Order placed successfully');
@@ -39,5 +39,9 @@ class OrderController
     // Clear the cart after saving
     session()->forget('cart');
 }
+    public function index()
+    {
+        return view ('Admin.Order.index');
+    }
 
 }
