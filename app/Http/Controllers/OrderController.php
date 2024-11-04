@@ -5,8 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
+use App\Services\ProductService;
+use App\Services\OrderService;
 class OrderController
 {
+    protected $productService;
+    protected $orderService;
+    public function __construct(ProductService $productService, OrderService $orderService)
+    {
+        $this->productService = $productService;
+        $this->orderService = $orderService;
+    }
     public function storeOrder(Request $request)
     {
         $user =Auth::user();
@@ -15,7 +24,7 @@ class OrderController
             'full_name' => $request->input('full_name'),
             'phone_number' => $request->input('phone_number'),
             'address' => $request->input('address'),
-            'user_id' => $user->id, // Assuming authenticated user
+            'user_id' => $user->id, 
         ]);
         $this->saveOrderProducts($order);
         return redirect()->route('home')->with('success', 'Order placed successfully');
@@ -39,5 +48,27 @@ class OrderController
     // Clear the cart after saving
     session()->forget('cart');
 }
+    public function index()
+    {
+        $orders = $this->orderService->paginate(null,8);
+
+        return view('Admin.Order.index', compact('orders'));
+    }
+    public function show($id){
+        $order=$this->orderService->getById($id);
+        return view('Admin.Order.edit', compact('order'));
+    }
+    public function destroy($id)
+    {
+        $this->orderService->destroy($id);
+        return back()->with("success","Successfully deleted");
+    }
+    public function update(Request $request, $id)
+    {
+        $data=$request->all();
+        $data['total_amount']= str_replace(['$', ','], '', $data['total_amount']);
+        $this->orderService->update($id,$data);
+        return back()->with("success","Successfully updated");
+    }
 
 }

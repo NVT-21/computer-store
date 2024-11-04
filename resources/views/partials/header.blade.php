@@ -80,13 +80,13 @@
 				<nav class="main-nav main-nav1">
 					<ul>
 						<li class="has-mega-menu">
-							<a href="/home">Home</a>
+							<a href="/">Home</a>
 							
 						</li>
 						<li class=" has-mega-menu">
 							<a href="/list-products">EXPLORE STORES</a>
 						</li>
-						<li><a href="#">FLASH SALE</a></li>
+		
 				
 					</ul>
 					<a href="#" class="toggle-mobile-menu"><span></span></a>

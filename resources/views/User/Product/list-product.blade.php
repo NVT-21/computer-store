@@ -103,14 +103,14 @@
 									<div class="item-product item-product1">
 										<div class="product-thumb">
 											<a href="#" class="product-thumb-link zoom-thumb"><img src="{{$product->image_path}}" alt=""></a>
-											<a href="quick-view.html" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
+											<a href="/product-detail/{{$product->id}}" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
 										</div>
 										<div class="product-info">
 											<div class="product-price">
 												<ins class="color title18 font-bold">${{$product->price}}</ins>
 											</div>
 											<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">{{$product->name}}</a></h3>
-											<a  class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
+											<a  class="cat-parent silver">Stock ( <span class="title10 silver">{{$product->stock}}</span>)</a>
 											<div class="product-extra-link">
 											<form action="{{ route('cart.add', $product->id) }}" method="POST">
 											@csrf

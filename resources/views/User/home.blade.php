@@ -91,27 +91,38 @@
 				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>Best-selling PC</h2>
 				<div class="product-slider">
 					<div class="wrap-item group-navi rect-navi" data-pagination="false" data-navigation="true" data-itemscustom="[[0,1],[560,2],[768,3],[990,4],[1200,5]]">
-						@foreach ($bestSellingPCGaming as $Pc)
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/furniture/marketsale-furniture-04.jpg" alt="" /></a>
-								<a href="/product-detail/{{$Pc->id}}" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$ {{$Pc->product_price}}</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="/product-detail/{{$Pc->id}}" class="black">{{ $Pc->product_name }}</a></h3>
-								<a href="#" class="cat-parent silver">Quantity Sold <span class="title10 silver">({{$Pc ->total_sold}})</span></a>
-								<div class="product-extra-link">
-								<form action="{{ route('cart.add', $Pc->id) }}" method="POST">
-											@csrf
-											<button type="submit" class="btn btn-primary">Add to Cart</button>
-								</form>
-								</div>
-							</div>
-						</div>
-						@endforeach
+					@if($bestSellingPCGaming==null)
+    <p>No best-selling gaming PCs available at the moment.</p>
+@else
+    @foreach ($bestSellingPCGaming as $Pc)
+        <div class="item-product item-product1">
+            <div class="product-thumb">
+                <a href="#" class="product-thumb-link zoom-thumb">
+                    <img src="images/product/furniture/marketsale-furniture-04.jpg" alt="" />
+                </a>
+                <a href="/product-detail/{{$Pc->id}}" class="quickview-link fancybox.iframe">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+            <div class="product-info">
+                <div class="product-price">
+                    <ins class="color title18 font-bold">$ {{$Pc->product_price}}</ins>
+                </div>
+                <h3 class="title18 crim-font product-title">
+                    <a href="/product-detail/{{$Pc->id}}" class="black">{{ $Pc->product_name }}</a>
+                </h3>
+                <a href="#" class="cat-parent silver">Quantity Sold <span class="title10 silver">({{$Pc->total_sold}})</span></a>
+                <div class="product-extra-link">
+                    <form action="{{ route('cart.add', $Pc->id) }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endforeach
+@endif
+
 					</div>
 				</div>
 			</div>
@@ -135,29 +146,44 @@
 				<h2 class="title18 crim-font title-box1 font-bold text-uppercase"><i class="fa fa-flash"></i>best-selling laptop</h2>
 				<div class="product-slider">
 					<div class="wrap-item group-navi rect-navi" data-pagination="false" data-navigation="true" data-itemscustom="[[0,1],[560,2],[768,3],[990,4],[1200,5]]">
-					@foreach ($bestSellingLapTop as $Pc)
-						<div class="item-product item-product1">
-							<div class="product-thumb">
-								<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/beauty/marketsale-beauty-14.jpg" alt="" /></a>
-								<a href="/product-detail/{{$Pc->id}}" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="product-info">
-								<div class="product-price">
-									<ins class="color title18 font-bold">$ {{$Pc->product_price}}</ins>
-								</div>
-								<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">{{ $Pc->product_name }}</a></h3>
-								<a href="#" class="cat-parent silver">Quantity Sold <span class="title10 silver">({{$Pc ->total_sold}})</span></a>
-							</div>
-							<div class="product-extra-link">
-								<form action="{{ route('cart.add', $Pc->id) }}" method="POST">
-											@csrf
-											<button type="submit" class="btn btn-primary">Add to Cart</button>
-								</form>
-								<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-								<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
-							</div>
+					@if($bestSellingLapTop==null)
+    		<p>No best-selling laptops available at the moment.</p>
+			@else
+				@foreach ($bestSellingLapTop as $Pc)
+					<div class="item-product item-product1">
+						<div class="product-thumb">
+							<a href="#" class="product-thumb-link zoom-thumb">
+								<img src="images/product/beauty/marketsale-beauty-14.jpg" alt="" />
+							</a>
+							<a href="/product-detail/{{$Pc->id}}" class="quickview-link fancybox.iframe">
+								<i class="fa fa-search"></i>
+							</a>
 						</div>
-						@endforeach
+						<div class="product-info">
+							<div class="product-price">
+								<ins class="color title18 font-bold">$ {{$Pc->product_price}}</ins>
+							</div>
+							<h3 class="title18 crim-font product-title">
+								<a href="product-detail.html" class="black">{{ $Pc->product_name }}</a>
+							</h3>
+							<a href="#" class="cat-parent silver">Quantity Sold 
+								<span class="title10 silver">({{$Pc->total_sold}})</span>
+							</a>
+						</div>
+						<div class="product-extra-link">
+							<form action="{{ route('cart.add', $Pc->id) }}" method="POST">
+								@csrf
+								<button type="submit" class="btn btn-primary">Add to Cart</button>
+							</form>
+							<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
+							<a href="compare-product.html" class="compare-link fancybox fancybox.iframe">
+								<i class="fa fa-refresh"></i>
+							</a>
+						</div>
+					</div>
+				@endforeach
+@endif
+
 					</div>
 				</div>
 			</div>
