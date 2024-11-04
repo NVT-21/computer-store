@@ -25,18 +25,27 @@
                         <td>{{ $product->sale_price }}</td>
                         <td>
                             @if ($product->image_path)
-                                <img src="{{ asset('storage/' . $product->image_path) }}" alt="{{ $product->name }}" width="100">
+                                <img src="{{ $product->image_path }}" alt="{{ $product->name }}" width="100">
                             @else
                                 No image
                             @endif
                         </td>
+                     <td>
+                        <a href="{{ route('product.show', $product->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                        <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                        </form>
+                    </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        <div class="pagi-nav text-right">
+        {{ $products->links('pagination::bootstrap-5') }}
+		</div>
 
-        <!-- Pagination links -->
-        {{ $products->links() }}
     @else
         <p>No products found.</p>
     @endif
