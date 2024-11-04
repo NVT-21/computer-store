@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('orders', function (Blueprint $table) {
             $table->decimal('total_amount', 10, 2)->default(0); 
-            $table->string('status')->after('total_amount')->default('pending');
+            $table->string('status')->after('total_amount')->default('Pending');
         });
     }
 

@@ -45,5 +45,9 @@ Route::get('/verify-password',[AuthController::class,'showVerifiedPassword'])->n
 Route::post('/verify-password',[AuthController::class,'verifyEmail'])->name('verification.verify');
 //order 
 Route::post('/store-order',[OrderController::class, 'storeOrder'])->name('order.storeOrder');
+Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
+Route::get('/orders/{id}',[OrderController::class, 'show'])->name('orders.show');
+Route::delete('/orders/{id}',[OrderController::class, 'destroy'])->name('orders.destroy');
+Route::put('/orders/{id}',[OrderController::class,'update'])->name('orders.update');
 
 
