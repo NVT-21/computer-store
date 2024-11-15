@@ -22,6 +22,19 @@ Route::middleware('auth')->group(function () {
         Route::get("/logOut",[AuthController::class, 'logOut'])->name('logOut');
         Route::get('/my-profile', [UserController::class, 'showProfile'])->name('profile');
         Route::get('/check-out',[ProductController::class, 'showViewCheckOut'])->name('product.check-out');
+        //Order
+        Route::post('/store-order',[OrderController::class, 'storeOrder'])->name('order.storeOrder');
+        Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
+        Route::get('/orders/{id}',[OrderController::class, 'show'])->name('orders.show');
+        Route::delete('/orders/{id}',[OrderController::class, 'destroy'])->name('orders.destroy');
+        Route::put('/orders/{id}',[OrderController::class,'update'])->name('orders.update');
+        //sales 
+        Route::get('/sales',[OrderController::class,'showViewSales'])->name('sales.index');
+        Route::post('/sales',[OrderController::class,'calculateOrdersByTime'])->name('sales.calculateOrdersByTime');
+        //product
+        Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
+        Route::get('/products', [ProductController::class, 'index'])->name('product.index');
+        Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
 });
 
 //product(user)
@@ -37,17 +50,20 @@ Route::get("/searchProduct",[ProductController::class, 'showProductBySearch'])->
 Route::get('/product-detail/{idProduct}',[ProductController::class, 'showProductDetail'])->name('product.productDetail');
 Route::delete('/cart/remove/{id}', [ProductController::class, 'removeProductOfCart'])->name('cart.remove');
 //product(admin)
-Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
-Route::get('/products', [ProductController::class, 'index'])->name('product.index');
-Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
+// Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
+// Route::get('/products', [ProductController::class, 'index'])->name('product.index');
+// Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
 //verify password 
 Route::get('/verify-password',[AuthController::class,'showVerifiedPassword'])->name('showVerifyPassword');
 Route::post('/verify-password',[AuthController::class,'verifyEmail'])->name('verification.verify');
 //order 
-Route::post('/store-order',[OrderController::class, 'storeOrder'])->name('order.storeOrder');
-Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
-Route::get('/orders/{id}',[OrderController::class, 'show'])->name('orders.show');
-Route::delete('/orders/{id}',[OrderController::class, 'destroy'])->name('orders.destroy');
-Route::put('/orders/{id}',[OrderController::class,'update'])->name('orders.update');
+// Route::post('/store-order',[OrderController::class, 'storeOrder'])->name('order.storeOrder');
+// Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
+// Route::get('/orders/{id}',[OrderController::class, 'show'])->name('orders.show');
+// Route::delete('/orders/{id}',[OrderController::class, 'destroy'])->name('orders.destroy');
+// Route::put('/orders/{id}',[OrderController::class,'update'])->name('orders.update');
+// //sales 
+// Route::get('/sales',[OrderController::class,'showViewSales'])->name('sales.index');
+// Route::post('/sales',[OrderController::class,'calculateOrdersByTime'])->name('sales.calculateOrdersByTime');
 
 

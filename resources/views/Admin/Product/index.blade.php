@@ -4,7 +4,9 @@
 <div class="content-wrapper">
 <section class="content">
     <h2>Products</h2>
-
+    <div class="mb-3">
+        <a href="{{ route('product.create') }}" class="btn btn-success">Create New Product</a>
+    </div>
     @if ($products->count())
         <table class="table">
             <thead>

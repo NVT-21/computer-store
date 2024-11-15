@@ -69,8 +69,7 @@
 										<div class="row">
 											<div class="col-md-4 col-sm-4 col-xs-12">
 												<div class="product-thumb">
-													<a href="#" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-02.jpg" alt=""></a>
-													<a href="/product-detail/{{$product->id}}" class="quickview-link fancybox.iframe"><i class="fa fa-search"></i></a>
+													<a href="/product-detail/{{$product->id}}" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-02.jpg" alt=""></a>
 												</div>
 											</div>
 											<div class="col-md-8 col-sm-8 col-xs-12">
