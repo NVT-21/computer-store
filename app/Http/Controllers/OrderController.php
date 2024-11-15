@@ -70,5 +70,21 @@ class OrderController
         $this->orderService->update($id,$data);
         return back()->with("success","Successfully updated");
     }
+    public function showViewSales()
+    {  
+        $calculateOrders = $this->orderService->calculateOrdersByTime(null, null);
+
+        // Use compact to pass the variable
+        return view("Admin.Sales.index", compact("calculateOrders"));
+    }
+    public function calculateOrdersByTime(Request $request)
+    {
+        $month = $request->input('month');
+        $year = $request->input('year');
+
+        $calculateOrders = $this->orderService->calculateOrdersByTime($month, $year);
+
+        return view("Admin.Sales.index", compact("calculateOrders"));
+    }
 
 }

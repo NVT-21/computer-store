@@ -11,22 +11,10 @@
 						<div class="col-md-5 col-sm-6 col-xs-12">
 							<div class="detail-gallery">
 								<div class="mid">
-									<img src="images/product/fashion/marketsale-watch-01.jpg" alt=""/>
-									<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
-									<a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+								<img src="{{ asset($product->image_path) }}" alt=""/>
+									
 								</div>
-								<div class="gallery-control">
-									<div class="carousel" data-visible="4" data-vertical="true">
-										<ul class="list-none">
-											<li><a href="#" class="active"><img src="images/product/fashion/marketsale-watch-01.jpg" alt=""/></a></li>
-											<li><a href="#"><img src="images/product/fashion/marketsale-watch-02.jpg" alt=""/></a></li>
-											<li><a href="#"><img src="images/product/fashion/marketsale-watch-03.jpg" alt=""/></a></li>
-											<li><a href="#"><img src="images/product/fashion/marketsale-watch-04.jpg" alt=""/></a></li>
-											<li><a href="#"><img src="images/product/fashion/marketsale-watch-05.jpg" alt=""/></a></li>
-											<li><a href="#"><img src="images/product/fashion/marketsale-watch-06.jpg" alt=""/></a></li>
-										</ul>
-									</div>
-								</div>
+								
 							</div>
 							<!-- End Gallery -->
 						</div>
@@ -47,7 +35,7 @@
 										<a href="#" class="qty-up silver"><i class="fa fa-plus-square"></i></a>
 									</div>
 									<div class="product-extra-link">
-									<form action="{{ route('cart.add', $product->id) }}" method="POST">
+									<form style="margin-left: -126px; margin-bottom: 10px;" action="{{ route('cart.add', $product->id) }}" method="POST">
 											@csrf
 											<button type="submit" class="btn btn-primary">Add to Cart</button>
 									</form>
@@ -58,7 +46,7 @@
 								<ul class="list-none product-meta-info">
 									<li>
 										<label class="silver">Category:</label>
-										<a href="#">Electronic</a>
+										<a href="#">{{$product->category->name}}</a>
 									</li>
 								</ul>
 							</div>

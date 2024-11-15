@@ -17,7 +17,7 @@
 								<div class="row">
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<p>
-											<label>Username <span class="required">*</span></label>
+											<label>Fullname <span class="required">*</span></label>
 											<input style="font-weight: bold; color:black;" type="text" name="fullname" value="{{ $user->fullname }}" required />
 										</p>
 									</div>

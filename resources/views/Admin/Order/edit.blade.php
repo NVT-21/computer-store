@@ -3,7 +3,7 @@
 @section('content')
 <div class="content-wrapper">
     <div class="content">
-        <h2>Edit Order</h2>
+    
 
         <!-- Display success message if any -->
         @if(session('success'))
@@ -49,6 +49,7 @@
                     <label for="status">Status:</label>
                     <select name="status" class="form-control">
                         <option value="Pending" {{ old('status', $order->status) == 'Pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="Processing" {{ old('status', $order->status) == 'Processing' ? 'selected' : '' }}>Processing</option>
                         <option value="Completed" {{ old('status', $order->status) == 'Completed' ? 'selected' : '' }}>Completed</option>
                         <option value="Cancelled" {{ old('status', $order->status) == 'Cancelled' ? 'selected' : '' }}>Cancelled</option>
                     </select>
