@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\AuthService;
+use App\Services\ProductService;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Mail;
@@ -14,9 +15,11 @@ use Session;
 class AuthController extends Controller
 {
     protected $userService ;
-    public function __construct(AuthService $userService)
+    protected $productService ;
+    public function __construct(AuthService $userService,ProductService $productService)
     {
         $this->userService = $userService;
+        $this->productService = $productService;
     }
     function register(UserRequest $request){
         $data =  $request->validated();
@@ -71,30 +74,12 @@ class AuthController extends Controller
     }
     public function showHome()
 {  
-    try {
-        $bestSellingPCGamingResponse = calculateTopSellingProduct("PC Gaming");
-        $bestSellingLapTopResponse = calculateTopSellingProduct("LapTop");
-
-        // Decode the responses to access their data
-        $bestSellingPCGaming = $bestSellingPCGamingResponse->getData();
-        $bestSellingLapTop = $bestSellingLapTopResponse->getData();
-        if (isset($bestSellingPCGaming->error) || isset($bestSellingLapTop->error)) {
-            $bestSellingPCGamingResponse = null;
-            $bestSellingLapTopResponse = null;
-            $error = "Unable to fetch top-selling products.";
-        }
-    } catch (\Exception $e) {
-        // Handle general exceptions
-        $bestSellingPCGaming = null;
-        $bestSellingLapTop = null;
-        $error = "Unable to fetch top-selling products.";
-    }
-
-    // Pass data to the view
+    $PC=$this->productService->getProductsByNameCategory("PC");
+    $Laptop=$this->productService->getProductsByNameCategory("LapTop");
+    
     return view('User.home', [
-        'bestSellingPCGaming' =>  $bestSellingPCGamingResponse,
-        'bestSellingLapTop' =>  $bestSellingLapTopResponse,
-        'error' => $error ?? null,
+        'bestSellingPCGaming' =>$PC  ,
+        'bestSellingLapTop' =>$Laptop  ,
     ]);
 }
 

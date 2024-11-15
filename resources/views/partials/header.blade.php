@@ -55,7 +55,7 @@
 									<div class="dropdown-box">
 										<a href="javascript:void(0)" class="dropdown-link">All Categories</a>
 									</div>
-									<input type="text" name="s" placeholder="What are you looking for?"/>
+									<input type="text" name="s" placeholder="What are you looking for?" required/>
 									<div class="submit-form">
 										<input type="submit" value="" />
 									</div>

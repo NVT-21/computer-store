@@ -4,7 +4,7 @@
 <div class="content-wrapper">
 <section class="content">
     <h2>Orders</h2>
-
+   
     @if ($orders->count())
         <table class="table">
             <thead>
