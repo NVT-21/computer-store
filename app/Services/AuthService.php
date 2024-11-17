@@ -38,8 +38,12 @@ Class AuthService
                    'message' => "User is not verified",
                 ];
             }
-            return Auth::user();
-        } else {
+            return [
+                'success' => true,
+                'user' => Auth::user(),
+            ];
+        } 
+         else {
             // Đăng nhập thất bại
             return [
                 'success' => false,
