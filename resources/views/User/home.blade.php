@@ -8,7 +8,7 @@
 			<div class="banner-slider bg-slider parallax-slider banner-slider1">
 				<div class="wrap-item pagi-border square-navi" data-navigation="true" data-itemscustom="[[0,1]]" data-autoplay="true" data-transition="fade">
 					<div class="item-slider item-slider1">
-						<div class="banner-thumb"><a href="#"><img src="images/home/home1/slide1.jpg" alt="" /></a></div>
+						<div class="banner-thumb"><a href="#"><img src="images/home/home1/LapStore.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
 							<h3 class="title30 crim-font font-bold">Technology & Innovation</h3>
@@ -20,7 +20,7 @@
 						</div>
 					</div>
 					<div class="item-slider item-slider1">
-						<div class="banner-thumb"><a href="#"><img src="images/home/home1/slide2.jpg" alt="" /></a></div>
+						<div class="banner-thumb"><a href="#"><img src="images/home/home1/MacMini.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
 							<h3 class="title30 crim-font font-bold">Power Up Your Workspace</h3>
@@ -32,7 +32,7 @@
 						</div>
 					</div>
 					<div class="item-slider item-slider1">
-						<div class="banner-thumb"><a href="#"><img src="images/home/home1/slide3.jpg" alt="" /></a></div>
+						<div class="banner-thumb"><a href="#"><img src="images/home/home1/3Laptop.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
 							<h3 class="title30 crim-font font-bold">Summer Collection</h3>
@@ -50,7 +50,7 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad1.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adPC.png" alt="" /></a>
 							<div class="banner-info">
 								<h3 class="title18 text-uppercase font-bold crim-font">PC</h3>
 								<p class="desc black">Up to <span class="title18 font-bold color">20% off</span></p>
@@ -59,7 +59,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad2.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adLapGaming.jpg" alt="" /></a>
 							<div class="banner-info">
 								<h3 class="title18 text-uppercase font-bold crim-font">LapTop Gaming</h3>
 								<p class="desc black">From <span class="title18 font-bold color">$690.00</span></p>
@@ -68,7 +68,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad3.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adLapOffice.jpg" alt="" /></a>
 							<div class="banner-info">
 								<h3 class="title18 text-uppercase font-bold crim-font">office laptop</h3>
 								<p class="desc black">From <span class="title18 font-bold color">$359.00</span></p>
@@ -77,7 +77,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/ad4.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adMouse.jpg" alt="" /></a>
 							<div class="banner-info">
 								<h3 class="title18 text-uppercase font-bold crim-font">Mouse</h3>
 			
@@ -129,12 +129,12 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="banner-adv fade-out-in">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bn1.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bnPC.jpg" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="banner-adv fade-out-in">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bn2.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bnAccessories.jpg" alt="" /></a>
 						</div>
 					</div>
 				</div>
@@ -184,12 +184,12 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="banner-adv fade-out-in">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bn3.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bnTopSellers.jpg" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="banner-adv fade-out-in">
-							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bn4.jpg" alt="" /></a>
+							<a href="#" class="adv-thumb-link"><img src="images/home/home1/bnSale.png" alt="" /></a>
 						</div>
 					</div>
 				</div>
@@ -197,7 +197,7 @@
 			<!-- End Product Adv -->
 			<!-- End Store -->
 			<div class="banner-adv adv-collect1 zoom-image fade-in-out">
-				<a href="#" class="adv-thumb-link"><img src="images/home/home1/bn5.jpg" alt="" /></a>
+				<a href="#" class="adv-thumb-link"><img src="images/home/home1/bnCollection.jpg" alt="" /></a>
 				<div class="banner-info text-center text-uppercase">
 					<h3 class="title30 inline-block font-bold">Defi lift 3d</h3>
 					<h4 class="title18">collection</h4>
