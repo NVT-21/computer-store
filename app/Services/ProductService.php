@@ -3,7 +3,8 @@ namespace App\Services;
 
 use App\Repositories\ProductRepository;
 use Illuminate\Support\Facades\Hash;
-
+use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 class ProductService extends BaseService
 {
     protected $productRepository;
@@ -33,6 +34,10 @@ class ProductService extends BaseService
     {
         return $this->productRepository->getProductsByNameCategory($category,$limit);
     }
+    public function paginateForProduct($filters = null, $perPage = 9)
+{
+    return Product::with(['category', 'brand'])->paginate($perPage);
+}
   
    
 }

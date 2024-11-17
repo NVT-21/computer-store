@@ -28,6 +28,7 @@ class ProductRequest extends FormRequest
             'sale_price' => 'nullable|integer',
             'image_path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'category_id' => 'required|exists:categories,id',
+            'brand_id' => 'nullable|exists:brands,id',
         ];
     }
 
@@ -49,6 +50,7 @@ class ProductRequest extends FormRequest
             
             'category_id.required' => 'The category is required.',
             'category_id.exists' => 'The selected category is invalid.',
+            
         ];
     }
 }

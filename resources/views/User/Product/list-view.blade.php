@@ -69,7 +69,7 @@
 										<div class="row">
 											<div class="col-md-4 col-sm-4 col-xs-12">
 												<div class="product-thumb">
-													<a href="/product-detail/{{$product->id}}" class="product-thumb-link zoom-thumb"><img src="images/product/fashion/marketsale-watch-02.jpg" alt=""></a>
+													<a href="/product-detail/{{$product->id}}" class="product-thumb-link zoom-thumb"><img src="{{$product->image_path}}" alt=""></a>
 												</div>
 											</div>
 											<div class="col-md-8 col-sm-8 col-xs-12">
@@ -78,7 +78,7 @@
 													<div class="product-price">
 														<ins class="color title18 font-bold">${{$product->price}}</ins>
 													</div>
-													<a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
+													<a href="#" class="cat-parent silver">Category : {{$product->category->name}} </a>
 													<div class="product-extra-link">
 														<a href="#" class="addcart-link">Add to Cart</a>
 														<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
