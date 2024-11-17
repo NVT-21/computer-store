@@ -36,7 +36,7 @@
 											<a class="removeProductOfCart" href="#"><i class="fa fa-trash"></i></a>
 										</td>
 										<td class="product-thumbnail">
-											<a href="#"><img  src="images/product/fashion/marketsale-watch-11.jpg" alt=""/></a>					
+											<a href="#"><img  src="{{$details['image']}}" alt=""/></a>					
 										</td>
 										<td class="product-name" data-title="Product">
 											<a href="product-detail.html">{{$details['name']}}</a>					
