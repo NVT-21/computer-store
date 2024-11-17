@@ -34,14 +34,12 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
        
         $result = $this->userService->login($credentials);
-        
         if (!$result['success']) {
             return back()->with('error', $result['message'])->withInput($request->only('email'));
         }
-      
-        $idRoles = $result->roles->pluck('id')->toArray();
+        $idRoles = $result['user']->roles->pluck('id')->toArray();
         if (isAdmin($idRoles)) {
-            return redirect()->route('admin.home')->with('success', 'Login successful');
+            return redirect()->route('product.index')->with('success', 'Login successful');
         } else {
             return redirect()->route('home')->with('success', 'Login successful');
         }

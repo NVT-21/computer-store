@@ -33,7 +33,8 @@ class ProductController
     public function create()
     {
         $categories=$this->categoryService->getAll();
-        return view('Admin.Product.create',['categories'=>$categories]);
+        $brands=$this->brandService->getAll();
+        return view('Admin.Product.create',['categories'=>$categories,'brands'=>$brands]);
     }
 
     /**

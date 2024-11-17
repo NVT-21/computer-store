@@ -1,6 +1,21 @@
 @extends('layouts.app')
 @section('title', 'List Product')
+<style>
+	.item-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%; /* Đồng bộ chiều cao */
+}
+.product-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
+
+
+</style>
 @section('content')
 <div id="content">
 		<div class="content-page">
@@ -109,7 +124,10 @@
 												<ins class="color title18 font-bold">${{$product->price}}</ins>
 											</div>
 											<h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">{{$product->name}}</a></h3>
-											<a  class="cat-parent silver">Stock ( <span class="title10 silver">{{$product->stock}}</span>)</a>
+											@if($product->category && $product->category->name)
+												<a class="cat-parent silver">Category : {{$product->category->name}}</a>
+											@endif
+
 											<div class="product-extra-link">
 											<form action="{{ route('cart.add', $product->id) }}" method="POST">
 											@csrf
@@ -165,8 +183,7 @@
                                             <ins class="color title18 font-bold">$${product.price}</ins>
                                         </div>
                                         <h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">${product.name}</a></h3>
-                                        <a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-										<form action="{{ route('cart.add', $product->id) }}" method="POST">
+										<form action="add-to-cart/${product.id}" method="POST">
 											@csrf
 											<button type="submit" class="btn btn-primary">Add to Cart</button>
 											</form>
@@ -241,7 +258,7 @@
                                         </div>
                                         <h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">${product.name}</a></h3>
                                         <a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
-										<form action="{{ route('cart.add', $product->id) }}" method="POST">
+										<form action="add-to-cart/${product.id}" method="POST">
 											@csrf
 											<button type="submit" class="btn btn-primary">Add to Cart</button>
 											</form>
