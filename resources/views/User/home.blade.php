@@ -11,7 +11,7 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/LapStore.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-							<h3 class="title30 crim-font font-bold">Technology & Innovation</h3>
+							<h3  class="title30 crim-font font-bold  ">Technology & Innovation</h3>
 							<h2 class="title48 crim-font font-bold color">Best-Selling PCs</h2>
 							<h3 class="title30 crim-font font-bold">Latest Collection</h3>
 							<a href="#" class="shop-button bg-white">Shop Now</a>
