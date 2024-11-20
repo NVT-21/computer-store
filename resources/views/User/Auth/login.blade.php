@@ -28,24 +28,9 @@
 													<input type="submit" class="register-button" name="login" value="Login">
 												</p>
 												<div class="table-custom create-account">
-													<div class="text-left">
-														<p>
-															<input type="checkbox"  id="remember" /> <label for="remember">Remember me</label>
-														</p>
-													</div>
-													<div class="text-right">
-														<a href="#" class="color">Lost your password?</a>
-													</div>
+													
 												</div>
-												<h2 class="title18 social-login-title">Or login with</h2>
-												<div class="social-login-block table-custom text-center">
-													<div class="social-login-btn">
-														<a href="#" class="login-fb-link">Facebook</a>
-													</div>
-													<div class="social-login-btn">
-														<a href="#" class="login-goo-link">Google</a>
-													</div>
-												</div>
+												
 											</form>
 										</div>
 									</div>
