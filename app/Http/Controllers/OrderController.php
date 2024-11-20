@@ -16,38 +16,45 @@ class OrderController
         $this->productService = $productService;
         $this->orderService = $orderService;
     }
-    public function storeOrder(Request $request)
-    {
-        $user =Auth::user();
-        if(!$user) return back()->with("error","User not logged in");
+        public function storeOrder(Request $request)
+        {
+            $user =Auth::user();
+            if(!$user) return back()->with("error","User not logged in");
+            $cart = session('cart');
+            $totalAmount = 0;
+            foreach ($cart as $productId => $details) {
+                $totalAmount += $details['price'] * $details['quantity'];
+            }
+
+        // Create the order
         $order = Order::create([
             'full_name' => $request->input('full_name'),
             'phone_number' => $request->input('phone_number'),
             'address' => $request->input('address'),
-            'user_id' => $user->id, 
+            'user_id' => $user->id,
+            'total_amount' => $totalAmount, // Save total amount
         ]);
-        $this->saveOrderProducts($order);
-        return redirect()->route('home')->with('success', 'Order placed successfully');
+            $this->saveOrderProducts($order);
+            return redirect()->route('home')->with('success', 'Order placed successfully');
+        }
+        public function saveOrderProducts(Order $order)
+    {
+        // Retrieve cart data from the session
+        $cart = session('cart');
+
+
+        $productsWithQuantities = [];
+
+        foreach ($cart as $productId => $details) {
+            $productsWithQuantities[$productId] = ['quantity' => $details['quantity']];
+        }
+
+        // Attach products with quantities to the order
+        $order->products()->attach($productsWithQuantities);
+
+        // Clear the cart after saving
+        session()->forget('cart');
     }
-    public function saveOrderProducts(Order $order)
-{
-    // Retrieve cart data from the session
-    $cart = session('cart');
-
-
-    // Prepare the data for the pivot table
-    $productsWithQuantities = [];
-
-    foreach ($cart as $productId => $details) {
-        $productsWithQuantities[$productId] = ['quantity' => $details['quantity']];
-    }
-
-    // Attach products with quantities to the order
-    $order->products()->attach($productsWithQuantities);
-
-    // Clear the cart after saving
-    session()->forget('cart');
-}
     public function index()
     {
         $orders = $this->orderService->paginate(null,8);
@@ -73,7 +80,7 @@ class OrderController
     public function showViewSales()
     {  
         $calculateOrders = $this->orderService->calculateOrdersByTime(null, null);
-
+        
         // Use compact to pass the variable
         return view("Admin.Sales.index", compact("calculateOrders"));
     }
@@ -83,7 +90,7 @@ class OrderController
         $year = $request->input('year');
 
         $calculateOrders = $this->orderService->calculateOrdersByTime($month, $year);
-
+       
         return view("Admin.Sales.index", compact("calculateOrders"));
     }
 

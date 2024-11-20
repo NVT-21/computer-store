@@ -30,11 +30,9 @@ class OrderService extends BaseService
     $orderCount = 0;
     $totalProductQuantity = 0;
     foreach ($orders as $order) {
-        // Tính tổng tiền của đơn hàng
         $totalSales += $order->total_amount;
         $orderCount++;
 
-        // Tính tổng số lượng sản phẩm cho mỗi Order
         foreach ($order->products as $product) {
             $totalProductQuantity += $product->pivot->quantity;
         }

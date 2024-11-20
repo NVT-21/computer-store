@@ -8,6 +8,7 @@ class OrderRepository extends BaseRepository {
     public function getOrdersByTime($month = null, $year = null,$status="Completed")
     {
         $query = Order::query();
+        $order = $query->get();
         $query->where('status', $status);
         if ($month !== null) {
             $query->whereMonth('created_at', $month);
