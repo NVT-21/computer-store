@@ -44,7 +44,7 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-12 col-xs-12">
 						<div class="logo logo1">
-							<h1 class="title30 text-uppercase"><strong class="dark">az</strong><span class="bg-color white">theme</span></h1>
+							<h1 class="title30 text-uppercase"><strong class="dark">Eletech</strong><span class="bg-color white">Store</span></h1>
 							<h2 class="title11 opacity dark text-uppercase">Computer Shopping</h2>
 						</div>
 					</div>

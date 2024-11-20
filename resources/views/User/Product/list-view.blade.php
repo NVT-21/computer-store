@@ -80,9 +80,11 @@
 													</div>
 													<a href="#" class="cat-parent silver">Category : {{$product->category->name}} </a>
 													<div class="product-extra-link">
-														<a href="#" class="addcart-link">Add to Cart</a>
-														<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-														<a href="compare-product.html" class="compare-link fancybox fancybox.iframe"><i class="fa fa-refresh"></i></a>
+													<form action="{{ route('cart.add', $product->id) }}" method="POST">
+													@csrf
+													<button type="submit" class="btn btn-primary">Add to Cart</button>
+											    </form>
+														
 													</div>
 												</div>
 											</div>

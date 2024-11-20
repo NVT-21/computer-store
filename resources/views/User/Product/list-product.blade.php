@@ -23,18 +23,7 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-4 col-xs-12">
 						<aside class="sidebar sidebar-left">
-							<div class="widget widget-filter-price">
-								<h2 class="widget-title title14 font-bold text-uppercase inline-block">Price</h2>
-								<div class="widget-content">
-									<div class="range-filter">
-										<div class="slider-range"></div>
-										<ul class="list-inline-block">
-											<li><div class="amount"></div></li>
-											<li> <button id="btn-filter-price" class="btn-filter-price bg-color">Filter</button></li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							
 							<!-- End Widget -->
 	
 							<!-- End Widget -->
@@ -89,23 +78,7 @@
 									<h2 class="title24 font-bold text-uppercase pull-left">Products</h2>
 									<ul class="sort-pagi-bar list-inline-block pull-right">
 										<li>
-											<div class="dropdown-box show-by">
-												<a href="#" class="dropdown-link"><span class="gray">Show</span><span class="gray number-show">6</span></a>
-												<ul class="dropdown-list list-none">
-													<li><a href="#">6</a></li>
-													<li><a href="#">9</a></li>
-													<li><a href="#">12</a></li>
-													<li><a href="#">18</a></li>
-													<li><a href="#">24</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div class="view-type">
-												<a href="#" class="grid-view active"><i class="icon ion-grid"></i></a>
-												<a href="#" class="list-view"><i class="icon ion-navicon"></i></a>
-											</div>
-										</li>
+											
 									</ul>
 								</div>
 							</div>
@@ -143,7 +116,7 @@
 								
 							</div>
 							<div class="pagi-nav text-right">
-							{{ $products->links() }}
+							{{ $products->appends(request()->query())->links() }}
 							</div>
 						</div>
 					</div>
@@ -257,7 +230,6 @@
                                             <ins class="color title18 font-bold">$${product.price}</ins>
                                         </div>
                                         <h3 class="title18 crim-font product-title"><a href="product-detail.html" class="black">${product.name}</a></h3>
-                                        <a href="#" class="cat-parent silver">Fashion <span class="title10 silver">(8)</span></a>
 										<form action="add-to-cart/${product.id}" method="POST">
 											@csrf
 											<button type="submit" class="btn btn-primary">Add to Cart</button>
