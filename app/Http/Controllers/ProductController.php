@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Services\ProductService;
 use App\Services\CategoryService;
 use App\Services\BrandService;
+use App\Models\Brand;
+use App\Models\Category;
+use App\Models\Product;
 use App\Http\Requests\ProductRequest;
 class ProductController
 {
@@ -102,9 +105,9 @@ class ProductController
     }
     public function showViewProducts()
     {
-        $products=$this->productService->paginate(null,9);
-        $categories=$this->categoryService->getCategoriesWithProduct();
-       $brands=$this->brandService->getBrandsWithProductCount(6);
+       $products = Product::with('category', 'brand')->paginate(9);
+    $categories = Category::withCount('products')->get();
+    $brands = Brand::withCount('products')->get();
         return view("User.Product.list-product",['products'=>$products,'brands'=>$brands,'categories'=>$categories]);
     }
     public function showViewListProducts(){

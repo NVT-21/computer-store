@@ -11,10 +11,7 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/LapStore.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-							<h3  class="title30 crim-font font-bold  ">Technology & Innovation</h3>
-							<h2 class="title48 crim-font font-bold color">Best-Selling PCs</h2>
-							<h3 class="title30 crim-font font-bold">Latest Collection</h3>
-							<a href="#" class="shop-button bg-white">Shop Now</a>
+							
 
 							</div>
 						</div>
@@ -23,10 +20,7 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/MacMini.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-							<h3 class="title30 crim-font font-bold">Power Up Your Workspace</h3>
-							<h2 class="title48 crim-font font-bold color">Laptops & PCs</h2>
-							<h3 class="title30 crim-font font-bold">Up to 20% Off</h3>
-							<a href="#" class="shop-button bg-white">Shop Now</a>
+							
 
 							</div>
 						</div>
@@ -35,10 +29,7 @@
 						<div class="banner-thumb"><a href="#"><img src="images/home/home1/3Laptop.png" alt="" /></a></div>
 						<div class="banner-info text-center black text-uppercase animated" data-animated="zoomIn">
 							<div class="container">
-							<h3 class="title30 crim-font font-bold">Summer Collection</h3>
-							<h2 class="title48 crim-font font-bold color">Tech Gadgets</h2>
-							<h3 class="title30 crim-font font-bold">For All Ages</h3>
-							<a href="#" class="shop-button bg-white">Shop Now</a>
+							
 
 							</div>
 						</div>
@@ -51,35 +42,26 @@
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adPC.png" alt="" /></a>
-							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">PC</h3>
-								<p class="desc black">Up to <span class="title18 font-bold color">20% off</span></p>
-							</div>
+							
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adLapGaming.jpg" alt="" /></a>
-							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">LapTop Gaming</h3>
-								<p class="desc black">From <span class="title18 font-bold color">$690.00</span></p>
-							</div>
+							
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adLapOffice.jpg" alt="" /></a>
-							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">office laptop</h3>
-								<p class="desc black">From <span class="title18 font-bold color">$359.00</span></p>
-							</div>
+							
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="item-adv1 banner-adv zoom-image">
 							<a href="#" class="adv-thumb-link"><img src="images/home/home1/adMouse.jpg" alt="" /></a>
 							<div class="banner-info">
-								<h3 class="title18 text-uppercase font-bold crim-font">Mouse</h3>
+							
 			
 							</div>
 						</div>

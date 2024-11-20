@@ -56,15 +56,7 @@
 										</td>
 									</tr>
 									@endforeach
-									<tr>
-										<td class="actions" colspan="6">
-											<div class="coupon">
-												<label for="coupon_code">Coupon:</label> 
-												<input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code"> 
-												<input type="submit" value="Apply Coupon" name="apply_coupon" class="button bg-color">
-											</div>
-											
-										</td>
+									<tr>		
 									</tr>
 									
 								</tbody>
@@ -85,14 +77,7 @@
 														<input type="radio" class="shipping_method" checked="checked" value="free_shipping" id="shipping_method_0_free_shipping" data-index="0" name="shipping_method[0]">
 														<label for="shipping_method_0_free_shipping">Free Shipping</label>
 													</li>
-													<li>
-														<input type="radio" class="shipping_method" value="local_delivery" id="shipping_method_0_local_delivery" data-index="0" name="shipping_method[0]">
-														<label for="shipping_method_0_local_delivery">Local Delivery (Free)</label>
-													</li>
-													<li>
-														<input type="radio" class="shipping_method" value="local_pickup" id="shipping_method_0_local_pickup" data-index="0" name="shipping_method[0]">
-														<label for="shipping_method_0_local_pickup">Local Pickup (Free)</label>
-													</li>
+													
 												</ul>
 											</td>
 										</tr>
