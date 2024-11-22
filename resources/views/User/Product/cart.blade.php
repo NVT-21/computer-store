@@ -89,8 +89,11 @@
 								</table>
 							</div>
 							<div class="wc-proceed-to-checkout">
-								<a class="checkout-button button alt wc-forward bg-color" href="/check-out">Proceed to Checkout</a>
+								<button type="button" class="checkout-button button alt wc-forward bg-color" id="proceedToCheckout">
+									Proceed to Checkout
+								</button>
 							</div>
+
 						</div>
 					</div>
 				</div>	
@@ -100,7 +103,40 @@
 			<p>Your cart is empty</p>
 		@endif
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script>
+			$('#proceedToCheckout').click(function(e) {
+    e.preventDefault();
+
+    // Lấy danh sách sản phẩm từ giỏ hàng
+    let cartData = [];
+    $('.cart_item').each(function() {
+        const productId = $(this).data('id');
+        const quantity = parseInt($(this).find('.qty-val').text());
+        cartData.push({ id: productId, quantity: quantity });
+    });
+    console.log(cartData);
+
+    // Gửi dữ liệu lên server để cập nhật giỏ hàng
+    axios.post('/update-cart', {
+        _token: '{{ csrf_token() }}', // CSRF token
+        cart: cartData // Dữ liệu giỏ hàng
+    })
+    .then(function(response) {
+        if (response.data.success) {
+            // Chuyển hướng đến trang checkout
+            window.location.href = '/check-out';
+        } else {
+            alert('Failed to update the cart. Please try again.');
+        }
+    })
+    .catch(function(error) {
+        alert('An error occurred. Please try again.');
+        console.error(error); // Log lỗi (nếu cần)
+    });
+});
+
+
 			// Khi nhấn nút tăng số lượng
 $('.qty-up').click(function(e) {
     e.preventDefault();

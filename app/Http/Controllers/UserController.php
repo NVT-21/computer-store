@@ -71,7 +71,7 @@ class UserController
              return back()->with("error","password current not correct");   
         }
         $user->password = Hash::make($data['new_password']);
-        $this->userService->update($user->id, $data);
+        $this->userService->update($user->id, ['password' => Hash::make($data['new_password'])]);
        return back()->with('success', 'Password changed successfully.');
 
     }

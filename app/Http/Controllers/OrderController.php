@@ -23,7 +23,7 @@ class OrderController
             $cart = session('cart');
             $totalAmount = 0;
             foreach ($cart as $productId => $details) {
-                $totalAmount += $details['price'] * $details['quantity'];
+                $totalAmount += $details['sale_price'] * $details['quantity'];
             }
 
         // Create the order
@@ -41,7 +41,7 @@ class OrderController
     {
         // Retrieve cart data from the session
         $cart = session('cart');
-
+        
 
         $productsWithQuantities = [];
 

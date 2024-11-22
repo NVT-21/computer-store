@@ -149,6 +149,7 @@ class ProductController
                 "name" => $product->name,
                 "quantity" => 1,
                 "price" => $product->price,
+                "sale_price"=> $product->sale_price,
                 "image" => $product->image_path
             ];
         }
@@ -189,4 +190,25 @@ class ProductController
     {
         return view('User.Product.check-out');
     }
+    public function updateCart(Request $request)
+    {
+        $cart = session()->get('cart', []);
+     
+        // Duyệt qua từng sản phẩm được gửi từ client
+        foreach ($request->cart as $item) {
+            $productId = $item['id'];
+            $quantity = $item['quantity'];
+    
+            // Cập nhật số lượng sản phẩm trong session giỏ hàng
+            if (isset($cart[$productId])) {
+                $cart[$productId]['quantity'] = $quantity;
+            }
+        }
+    
+        session()->put('cart', $cart);
+    
+        return response()->json(['success' => true]);
+    }
+    
+
 }

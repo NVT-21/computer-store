@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function () {
         Route::get("/logOut",[AuthController::class, 'logOut'])->name('logOut');
         Route::get('/my-profile', [UserController::class, 'showProfile'])->name('profile');
         Route::get('/check-out',[ProductController::class, 'showViewCheckOut'])->name('product.check-out');
+        Route::Post('/update-cart',[ProductController::class,'updateCart'])->name('product.update-cart');
         //Order
         Route::post('/store-order',[OrderController::class, 'storeOrder'])->name('order.storeOrder');
         Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');

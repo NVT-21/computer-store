@@ -34,26 +34,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<h2 class="title24 font-bold text-uppercase pull-left">Electronics</h2>
-									<ul class="sort-pagi-bar list-inline-block pull-right">
-										<li>
-											<div class="dropdown-box show-by">
-												<a href="#" class="dropdown-link"><span class="gray">Show</span><span class="gray number-show">6</span></a>
-												<ul class="dropdown-list list-none">
-													<li><a href="#">6</a></li>
-													<li><a href="#">9</a></li>
-													<li><a href="#">12</a></li>
-													<li><a href="#">18</a></li>
-													<li><a href="#">24</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div class="view-type">
-												<a href="#" class="grid-view"><i class="icon ion-grid"></i></a>
-												<a href="#" class="list-view active"><i class="icon ion-navicon"></i></a>
-											</div>
-										</li>
-									</ul>
+									
 								</div>
 							</div>
 						</div>

@@ -149,10 +149,7 @@
 								@csrf
 								<button type="submit" class="btn btn-primary">Add to Cart</button>
 							</form>
-							<a href="#" class="wishlist-link"><i class="fa fa-heart"></i></a>
-							<a href="compare-product.html" class="compare-link fancybox fancybox.iframe">
-								<i class="fa fa-refresh"></i>
-							</a>
+							
 						</div>
 					</div>
 				@endforeach
